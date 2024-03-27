@@ -15,7 +15,10 @@ class Tree:
         return self.__children
     
     def nb_children(self):
-        cpt=0
+        count=len(self.__children)
+        for j in range(len(self.__children)):
+            count+=self.__children[j].nb_children())
+        return count
         
         return len(self.__children)
 
